@@ -370,7 +370,7 @@ The system uses a comprehensive historical dataset (`merged_dataset_final.csv`) 
 
 ### Dataset Format
 ```csv
-Year, Season, District, Variety, Temperature, Rainfall, Yield, ...
+Year,	Region,	Rice Type,	Area,	Yield,	Temperature,	Rainfall,	Humidity
 ```
 
 ## 🔍 Technical Details
