@@ -29,7 +29,7 @@ This project is part of a Directed Research at the **Department of Electrical an
 
 ```
 ┌─────────────────────────────────────────────────────────────┐
-│                     User Interface (Web)                     │
+│                     User Interface (Web)                    │
 └──────────────────────┬──────────────────────────────────────┘
                        │
        ┌───────────────┴───────────────┐
