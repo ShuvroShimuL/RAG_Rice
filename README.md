@@ -449,9 +449,6 @@ This project is developed for academic research purposes at North South Universi
 
 Special thanks to:
 - **Dr. Shahnewaz Siddique** - Project Supervisor
-- **Sihab Mahmud** - Research Collaboration
-- **Showrav Solaiman Hossain** - Technical Support
-- **ECE Department, NSU** - Research Facilities
 
 ## 📚 References
 
