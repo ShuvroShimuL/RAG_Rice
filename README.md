@@ -37,7 +37,7 @@ This project is part of a Directed Research at the **Department of Electrical an
 ┌──────▼──────────┐          ┌────────▼─────────┐
 │   RAG System    │          │  ML Integration  │
 │                 │          │                  │
-│ • LLM (LLaMA)  │          │ • XGBoost Model  │
+│ • LLM (LLaMA)   │          │ • XGBoost Model  │
 │ • Vector DB     │          │ • Yield Predict  │
 │ • Embeddings    │          │ • Rice Varieties │
 └──────┬──────────┘          └────────┬─────────┘
