@@ -32,8 +32,8 @@ This project is part of a Directed Research at the **Department of Electrical an
 │               User Interface (Web)              │
 └──────────────────────┬──────────────────────────┘
                        │
-       ┌───────────────┴───────────────┐
-       │                               │
+       ┌───────────────┴──────────────┐
+       │                              │
 ┌──────▼──────────┐          ┌────────▼─────────┐
 │   RAG System    │          │  ML Integration  │
 │                 │          │                  │
@@ -41,7 +41,7 @@ This project is part of a Directed Research at the **Department of Electrical an
 │ • Vector DB     │          │ • Yield Predict  │
 │ • Embeddings    │          │ • Rice Varieties │
 └──────┬──────────┘          └────────┬─────────┘
-       │                               │
+       │                              │
 ┌──────▼──────────┐          ┌────────▼─────────┐
 │  Document       │          │   Historical     │
 │  Processing     │          │   Dataset        │
