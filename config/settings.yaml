@@ -1,0 +1,26 @@
+models:
+  llm_model: "llama-3.1-8b-instant"
+  embedding_model: "all-MiniLM-L6-v2"
+
+vector_db:
+  collection_name: "rice_advisory"
+  persist_directory: "./data/vector_store"
+
+document_processing:
+  chunk_size: 1000
+  chunk_overlap: 200
+
+data:
+  pdfs_directory: "./data/pdfs"
+  processed_directory: "./data/processed"
+  ml_dataset: "./data/merged_dataset_final.csv"
+
+ml_models:
+  yield_prediction: "./models/rice_yield_model.pkl"
+  region_encoder: "./models/region_encoder.pkl"
+  rice_types: "./models/rice_types.pkl"
+
+groq:
+  temperature: 0.3
+  max_tokens: 1000
+

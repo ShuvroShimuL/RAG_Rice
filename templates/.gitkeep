@@ -1,0 +1,9 @@
+# This file ensures that Git tracks this directory even when empty
+# Copy this file to any empty directories you want to include in Git
+
+# Common locations for .gitkeep:
+# - data/pdfs/.gitkeep
+# - data/processed/.gitkeep
+# - data/vector_store/.gitkeep
+# - models/.gitkeep
+# - logs/.gitkeep

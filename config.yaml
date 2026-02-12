@@ -1,0 +1,157 @@
+# RAG_Rice Configuration File
+# Place this file in config/config.yaml
+
+# ==================== Model Settings ====================
+models:
+  llm_model: "llama-3.1-8b-instant"        # Groq LLM model
+  embedding_model: "all-MiniLM-L6-v2"      # Sentence transformer for embeddings
+
+# ==================== Vector Database ====================
+vector_db:
+  collection_name: "rice_advisory"          # ChromaDB collection name
+  persist_directory: "./data/vector_store"  # Vector database storage path
+  distance_metric: "cosine"                 # cosine, l2, or ip
+
+# ==================== Document Processing ====================
+document_processing:
+  chunk_size: 1000                          # Size of text chunks
+  chunk_overlap: 200                        # Overlap between chunks
+  separator: "\n\n"                         # Chunk separator
+  max_documents: null                       # null for all, or set limit
+
+# ==================== Data Paths ====================
+data:
+  pdfs_directory: "./data/pdfs"
+  processed_directory: "./data/processed"
+  ml_dataset: "./data/merged_dataset_final.csv"
+
+# ==================== ML Model Paths ====================
+ml_models:
+  yield_prediction: "./models/rice_yield_model.pkl"
+  region_encoder: "./models/region_encoder.pkl"
+  rice_types: "./models/rice_types.pkl"
+
+# ==================== Groq LLM Settings ====================
+groq:
+  temperature: 0.3                          # 0.0-1.0 (lower = more focused)
+  max_tokens: 1000                          # Maximum response length
+  top_p: 0.9                               # Nucleus sampling
+  frequency_penalty: 0.0                    # Reduce repetition
+  presence_penalty: 0.0                     # Encourage diversity
+
+# ==================== RAG Settings ====================
+rag:
+  top_k_documents: 5                        # Number of documents to retrieve
+  min_relevance_score: 0.5                  # Minimum similarity threshold
+  enable_reranking: true                    # Enable document re-ranking
+  conversation_history_length: 10           # Messages to keep in context
+
+# ==================== Flask Application ====================
+flask:
+  host: "0.0.0.0"                          # Server host (0.0.0.0 for all interfaces)
+  port: 5000                                # Server port
+  debug: true                               # Debug mode (set false in production)
+  secret_key: "your-secret-key-here"        # Change this in production!
+  session_type: "filesystem"                # Session storage type
+
+# ==================== API Settings ====================
+api:
+  enable_cors: true                         # Enable CORS
+  rate_limit: 100                           # Requests per hour
+  max_query_length: 500                     # Maximum query length
+  timeout: 30                               # Request timeout in seconds
+
+# ==================== Logging ====================
+logging:
+  level: "INFO"                             # DEBUG, INFO, WARNING, ERROR, CRITICAL
+  file: "./logs/app.log"                    # Log file path
+  max_bytes: 10485760                       # 10MB per log file
+  backup_count: 5                           # Number of backup files
+  format: "%(asctime)s - %(name)s - %(levelname)s - %(message)s"
+
+# ==================== ML Training ====================
+ml_training:
+  test_size: 0.2                            # Train/test split ratio
+  random_state: 42                          # Random seed for reproducibility
+  n_estimators: 100                         # XGBoost trees
+  learning_rate: 0.1                        # XGBoost learning rate
+  max_depth: 6                              # Maximum tree depth
+  cv_folds: 5                               # Cross-validation folds
+
+# ==================== Features to Use ====================
+features:
+  rice_varieties:
+    - "BRRI dhan28"
+    - "BRRI dhan29"
+    - "BRRI dhan58"
+    - "BRRI dhan89"
+    - "Miniket"
+    - "Swarna"
+  
+  seasons:
+    - "Boro"
+    - "Aus"
+    - "Aman"
+  
+  regions:
+    - "Dhaka"
+    - "Chittagong"
+    - "Rajshahi"
+    - "Khulna"
+    - "Barisal"
+    - "Sylhet"
+    - "Rangpur"
+    - "Mymensingh"
+
+# ==================== System Prompts ====================
+prompts:
+  system_prompt: |
+    You are an expert agricultural advisor specializing in rice cultivation in Bangladesh.
+    Your role is to provide accurate, practical, and region-specific advice to farmers.
+    Always base your responses on the provided documents and data.
+    If you don't know something, say so clearly.
+    
+  rag_prompt_template: |
+    Based on the following context from agricultural documents, please answer the question.
+    
+    Context:
+    {context}
+    
+    Question: {question}
+    
+    Answer:
+  
+  yield_prompt_template: |
+    The predicted rice yield for the given conditions is approximately {yield} tons per hectare.
+    This prediction is based on historical data considering:
+    - Region: {region}
+    - Rice Variety: {variety}
+    - Season: {season}
+    - Weather conditions: Temperature {temperature}°C, Rainfall {rainfall}mm
+
+# ==================== Cache Settings ====================
+cache:
+  enable: true                              # Enable response caching
+  ttl: 3600                                 # Cache time-to-live (seconds)
+  max_size: 1000                            # Maximum cache entries
+
+# ==================== Advanced Features ====================
+advanced:
+  enable_multi_query: true                  # Multiple query reformulations
+  enable_web_search: false                  # External web search (if API available)
+  enable_feedback: true                     # User feedback collection
+  enable_analytics: true                    # Usage analytics
+
+# ==================== Security ====================
+security:
+  require_api_key: false                    # Require API key for access
+  allowed_origins:                          # CORS allowed origins
+    - "http://localhost:3000"
+    - "http://localhost:5000"
+  max_request_size: 10485760                # 10MB max request size
+
+# ==================== Performance ====================
+performance:
+  enable_async: false                       # Async processing (requires additional setup)
+  worker_threads: 4                         # Number of worker threads
+  connection_pool_size: 10                  # Database connection pool

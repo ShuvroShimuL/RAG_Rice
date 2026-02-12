@@ -1,0 +1,47 @@
+MIT License (Modified for Academic Use)
+
+Copyright (c) 2025 M Shamimul Haque Mondal Shimul
+Department of Electrical and Computer Engineering
+North South University, Dhaka, Bangladesh
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction for ACADEMIC AND RESEARCH purposes only,
+including without limitation the rights to use, copy, modify, merge, publish,
+and distribute copies of the Software, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
+
+ACADEMIC USE RESTRICTIONS:
+1. This software is intended for educational and research purposes.
+2. Commercial use, sale, or redistribution for profit requires explicit written 
+   permission from the copyright holder and North South University.
+3. Any research publication using this software must cite the original work:
+   
+   Citation:
+   M. S. H. M. Shimul, "Context-Aware Agricultural Chatbot: Integrating 
+   Document Retrieval with Predictive Analytics for Rice Farming," 
+   Directed Research Project, Department of Electrical and Computer Engineering,
+   North South University, Dhaka, Bangladesh, 2025.
+
+4. Derivative works for research purposes are permitted but must acknowledge 
+   this original work.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.
+
+ACKNOWLEDGMENT:
+This project was conducted under the supervision of Dr. Shahnewaz Siddique,
+Assistant Professor, Department of Electrical and Computer Engineering,
+North South University, Bangladesh.
+
+For commercial licensing or partnership inquiries, please contact:
+- Student: shamimul.shimul@northsouth.edu
+- Supervisor: shahnewaz.siddique@northsouth.edu
+- Department: ece@northsouth.edu

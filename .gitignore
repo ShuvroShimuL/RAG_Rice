@@ -1,0 +1,255 @@
+# RAG_Rice Project - Git Ignore File
+
+# ==================== Python ====================
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# C extensions
+*.so
+
+# Distribution / packaging
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+pip-wheel-metadata/
+share/python-wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+MANIFEST
+
+# PyInstaller
+*.manifest
+*.spec
+
+# Installer logs
+pip-log.txt
+pip-delete-this-directory.txt
+
+# Unit test / coverage reports
+htmlcov/
+.tox/
+.nox/
+.coverage
+.coverage.*
+.cache
+nosetests.xml
+coverage.xml
+*.cover
+*.py,cover
+.hypothesis/
+.pytest_cache/
+test-results/
+
+# Translations
+*.mo
+*.pot
+
+# Django stuff:
+*.log
+local_settings.py
+db.sqlite3
+db.sqlite3-journal
+
+# Flask stuff:
+instance/
+.webassets-cache
+flask_session/
+
+# Scrapy stuff:
+.scrapy
+
+# Sphinx documentation
+docs/_build/
+
+# PyBuilder
+target/
+
+# Jupyter Notebook
+.ipynb_checkpoints
+notebooks/.ipynb_checkpoints/
+
+# IPython
+profile_default/
+ipython_config.py
+
+# pyenv
+.python-version
+
+# pipenv
+Pipfile.lock
+
+# PEP 582
+__pypackages__/
+
+# Celery stuff
+celerybeat-schedule
+celerybeat.pid
+
+# SageMath parsed files
+*.sage.py
+
+# Environments
+.env
+.venv
+env/
+venv/
+rag_env/
+ENV/
+env.bak/
+venv.bak/
+
+# Spyder project settings
+.spyderproject
+.spyproject
+
+# Rope project settings
+.ropeproject
+
+# mkdocs documentation
+/site
+
+# mypy
+.mypy_cache/
+.dmypy.json
+dmypy.json
+
+# Pyre type checker
+.pyre/
+
+# ==================== Project Specific ====================
+# API Keys and Secrets
+.env
+.env.local
+.env.production
+*.key
+secrets.yaml
+config.local.yaml
+
+# Data Files (large files)
+data/pdfs/*.pdf
+data/processed/*.txt
+data/processed/*.json
+data/vector_store/
+*.csv
+*.xlsx
+*.parquet
+
+# Model Files (large binary files)
+models/*.pkl
+models/*.h5
+models/*.pt
+models/*.pth
+models/*.onnx
+*.joblib
+
+# Logs
+logs/
+*.log
+*.out
+
+# Temporary files
+tmp/
+temp/
+*.tmp
+*.temp
+
+# ==================== IDE / Editor ====================
+# VS Code
+.vscode/
+*.code-workspace
+
+# PyCharm
+.idea/
+*.iml
+*.iws
+
+# Sublime Text
+*.sublime-project
+*.sublime-workspace
+
+# Vim
+*.swp
+*.swo
+*~
+
+# Emacs
+*~
+\#*\#
+/.emacs.desktop
+/.emacs.desktop.lock
+
+# ==================== OS ====================
+# macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+Icon
+._*
+.Spotlight-V100
+.Trashes
+
+# Windows
+Thumbs.db
+Thumbs.db:encryptable
+ehthumbs.db
+ehthumbs_vista.db
+*.stackdump
+[Dd]esktop.ini
+$RECYCLE.BIN/
+*.lnk
+
+# Linux
+*~
+.directory
+.Trash-*
+
+# ==================== Project Outputs ====================
+# Evaluation Results
+evaluation_results/
+metrics/
+benchmarks/
+
+# Generated Reports
+reports/
+*.pdf
+*.docx
+
+# Backups
+backup/
+*.bak
+*.backup
+
+# ==================== Vector DB ====================
+# ChromaDB specific
+chroma.sqlite3
+chroma.sqlite3-shm
+chroma.sqlite3-wal
+
+# ==================== Keep Some Directories ====================
+# But keep these directories (even if empty)
+!data/.gitkeep
+!models/.gitkeep
+!logs/.gitkeep
+!data/pdfs/.gitkeep
+!data/processed/.gitkeep
+!data/vector_store/.gitkeep
+
+# ==================== Documentation ====================
+# But keep important docs
+!README.md
+!LICENSE
+!CONTRIBUTING.md
+!docs/**/*.md
